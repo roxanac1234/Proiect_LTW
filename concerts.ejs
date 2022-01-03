@@ -1,0 +1,198 @@
+<body>
+  <ul class="navigation">
+    <li><a href="contact">Contact</a></li>
+    <li style="float: right"><a href="about">About</a></li>
+    <li style="float: right"><a href="gallery">Gallery</a></li>
+    <li style="float: right"><a class="active" href="concerts">Concerts</a></li>
+    <li><a href="/">Home</a></li>
+
+    <li style="float: left">
+      <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+    </li>
+    <li style="float: left">
+      <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+    </li>
+    <li style="float: left">
+      <a href="#" class="google"><i class="fa fa-google"></i></a>
+    </li>
+    <li style="float: left">
+      <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+    </li>
+    <li style="float: left">
+      <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+    </li>
+  </ul>
+
+  <h1 id="gallery">
+    Choose your favourite artist and come see him perform live
+  </h1>
+  <div class="container-all">
+  <script>
+    function concert(name, price)
+     {
+      if (typeof Storage !== "undefined") {
+        localStorage.setItem("name", name);
+        localStorage.setItem("price",price);
+       // let name =setTimeout( function(){
+        //  alert('Hello, Mr. Universe!')}, 3000);
+       // console.log(name)
+        //var concertName=localStorage.getItem("name");
+        //document.getElementById("concertName").value=concertName;
+        //alert("data added in localstorage" +sessionStorage.getItem('price'));
+      } else {
+        //alert("local storage not supported");
+      }
+    }
+  </script>
+
+  <script>
+      function getConcertName() {
+       if (typeof Storage !== "undefined") {
+      var concertName=localStorage.getItem("name");
+      document.getElementById("concertName").value=concertName;
+     // alert("BUNA")
+    }
+  }
+  </script>
+  <script>
+        function submit()
+        {
+          getConcertName();
+          document.getElementById("concertId").submit();
+         // alert("NUUUUU");
+        }
+
+  </script>
+ 
+
+  
+    <div class="container" onclick="concert('MARTIN GARIX','300');  submit();">
+      <form action="/ticket" id="concertId" method="POST" >
+        <input type="hidden" name="concertName" id="concertName">
+    </form>
+      <!--<a href="/ticket">-->
+        <img src="/mg.jpg" alt="" style="width: 500px; height: 300px" />
+      </a>
+      <span class="title1">MARTIN GARRIX</span>
+      <span class="text1">September 12, 2022</span>
+      <span class="price">300 RON</span>
+    </div>
+    <div class="container" onclick="concert('SHAKIRA J-LO','500')">
+      <a href="/ticket">
+        <img src="/js.jpg" alt="" style="width: 500px; height: 300px" />
+      </a>
+      <span class="title1">SHAKIRA J-LO</span>
+      <span class="text1">June 16, 2022</span>
+      <span class="price">500 RON</span>
+    </div>
+    <div class="container" onclick="concert('THE WEEKND','600')">
+      <a href="/ticket">
+        <img src="/tw.jpg" alt="" style="width: 500px; height: 300px" />
+      </a>
+      <span class="title1">THE WEEKND</span>
+      <span class="text1">August 15, 2022</span>
+      <span class="price">600 RON</span>
+    </div>
+    <div class="container" onclick="concert('FIFTH HARMONY','306')">
+      <a href="/ticket">
+        <img src="/5hh.jpg" alt="" style="width: 500px; height: 300px" />
+      </a>
+      <span class="title1">FIFTH HARMONY</span>
+      <span class="text1">July 1, 2022</span>
+      <span class="price">306 RON</span>
+    </div>
+    <div class="container" onclick="concert('G-EAZY','500')">
+      <a href="/ticket">
+        <img src="/ge.jpg" alt="" style="width: 500px; height: 300px" />
+      </a>
+      <span class="title1">G-EAZY</span>
+      <span class="text1">November 4, 2022</span>
+      <span class="price">500 RON</span>
+    </div>
+    <div class="container" onclick="concert('BEYONCE','600')">
+      <a href="/ticket">
+        <img src="/qb.jpg" alt="" style="width: 500px; height: 300px" />
+      </a>
+      <span class="title1">BEYONCE</span>
+      <span class="text1">August 1, 2022
+      </span>
+      <span class="price">600 RON</span>
+    </div>
+    <div class="container" onclick="concert('SHAKIRA','450')">
+      <a href="/ticket">
+        <img src="/sh.jpg" alt="" style="width: 500px; height: 300px" />
+      </a>
+      <span class="title1">SHAKIRA</span>
+      <span class="text1">JUNE 14, 2022</span>
+      <span class="price">450 RON</span>
+    </div>
+    <div class="container"  onclick="concert('KATY PERRY','800')">
+      <a href="/ticket">
+        <img src="/katy.jpg" alt="" style="width: 500px; height: 300px" />
+      </a>
+      <span class="title1">KATY PERRY</span>
+      <span class="text1">July 3, 2022</span>
+      <span class="price">800 RON</span>
+    </div>
+    <div class="container" onclick="concert('ARIANA GRANDE','500')">
+      <a href="/ticket">
+        <img src="/ar2.jpg" alt="" style="width: 500px; height: 300px" />
+      </a>
+      <span class="title1">ARIANA GRANDE</span>
+      <span class="text1">August 7, 2022</span>
+      <span class="price">500 RON</span>
+    </div>
+  </div>
+
+  <footer class="footer-distributed">
+    <div class="footer-left">
+      <h3>Concert<span>WOW</span></h3>
+
+      <p class="footer-links">
+        <a href="#">Home</a>
+        ·
+        <a href="#">Blog</a>
+        ·
+        <a href="#">Pricing</a>
+        ·
+        <a href="#">About</a>
+        ·
+        <a href="#">Faq</a>
+        ·
+        <a href="#">Contact</a>
+      </p>
+
+      <p class="footer-company-name">Ceuca Roxana- Proiect LTW &copy; 2022</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>15 Palas Street</span> Iasi, Romania</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+0756342768</p>
+      </div>
+
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:support@company.com">contact@concertwow.com</a></p>
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>Follow us on social media:</span>
+      </p>
+
+      <div class="footer-icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+    
